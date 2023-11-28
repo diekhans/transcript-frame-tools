@@ -1,0 +1,6 @@
+* selecting CDS test cases
+  tawk '($6 < $7) && ($2 !~ /_/)' /hive/data/genomes/hg38/bed/gencodeV44/hgcImport/data/gencode.gp |head -500 >x.gp
+
+* big run
+
+ ../bin/findWeirdExonFrames  /hive/data/genomes/hg38/bed/gencodeV44/hgcImport/data/gencode.gp output/gencodeV44.weird.bed >&log

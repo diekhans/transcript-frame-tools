@@ -1,5 +1,15 @@
+root = .
+include ${root}/defs.mk
 
-tawk '($6 < $7) && ($2 !~ /_/)'  /hive/data/genomes/hg38/bed/gencodeV44/hgcImport/data/gencode.gp |head -500 >x.gp
+pyprogs = $(shell file -F $$'\t' bin/*  | awk '/Python script/{print $$1}')
 
 all:
 
+lint:
+	${FLAKE8} --color=never ${pyprogs}
+
+test:
+	cd tests && ${MAKE} test
+
+clean:
+	(cd tests && ${MAKE} clean)

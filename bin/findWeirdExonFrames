@@ -31,19 +31,21 @@ def checkWeirdIntron(gp, exonN, exonM):
         yield mkBed(gp, exonN.end - 2, exonM.start + 2,
                     f"adjacent_exons [{intronSize}]", SvgColors.darkviolet)
 
-def checkWeirdFrame(gp, exonN, exonM):
+def checkFrameShift(gp, exonN, exonM):
     if gp.strand == '+':
-        frameA, frameB = getEndFrame(exonN.frame), exonM.frame
+        exonA, exonB = exonN, exonM
     else:
-        frameA, frameB = getEndFrame(exonM.frame), exonN.frame
-    yield mkBed(gp, exonM.end - 3, exonN.start + 3,
-                f"frame_shift {frameA}..{frameB}", SvgColors.darkviolet)
+        exonA, exonB = exonM, exonN
+    frameAEnd, frameBStart = getEndFrame(exonA), exonB.frame
+    if frameAEnd != frameBStart:
+        yield mkBed(gp, exonN.end - 3, exonM.start + 3,
+                    f"frame_shift {frameAEnd}..{frameBStart}", SvgColors.darkviolet)
 
 def findWeirdExonPair(gp, exonN, exonM):
     weirdBeds = []
     weirdBeds += checkWeirdIntron(gp, exonN, exonM)
     if (exonN.frame is not None) and (exonM.frame is not None):
-        weirdBeds += checkWeirdFrame(gp, exonN, exonM)
+        weirdBeds += checkFrameShift(gp, exonN, exonM)
     return weirdBeds
 
 def getCdsStartPos(gp, exon):
@@ -75,21 +77,27 @@ def checkWeirdCdsStartEnd(gp):
     yield from checkCdsEndFrame(gp, endExon)
 
 def findWeirdCdsStartEnd(gp):
-    if gp.hasCds is not None:
+    if gp.hasCds():
         yield from checkWeirdCdsStartEnd(gp)
 
-def findWeirdAnnot(gp):
+def _findWeirdAnnot(gp):
     weirdBeds = []
-    for iIntron in range(0, gp.exonCount - 1):
+    for iIntron in range(0, len(gp.exons) - 1):
         weirdBeds += findWeirdExonPair(gp, gp.exons[iIntron], gp.exons[iIntron + 1])
     weirdBeds += findWeirdCdsStartEnd(gp)
     return weirdBeds
 
+def findWeirdAnnot(gp):
+    try:
+        return _findWeirdAnnot(gp)
+    except Exception as ex:
+        raise Exception(f"error analyzing {gp.name}") from ex
+
 def findWeirdAnnots(genePredFile):
     weirdBeds = []
     for gp in GenePredReader(genePredFile):
-        if gp.hasCds is not None:
-            weirdBeds += checkWeirdCdsStartEnd(gp)
+        if gp.hasCds():
+            weirdBeds += findWeirdAnnot(gp)
     return weirdBeds
 
 def findWeirdExonFrames(genePredFile, weirdBedFile):
@@ -101,5 +109,6 @@ def findWeirdExonFrames(genePredFile, weirdBedFile):
 
 def main(opts):
     findWeirdExonFrames(opts.genePred, opts.weirdBed)
+
 
 main(parseArgs())
