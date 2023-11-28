@@ -1,0 +1,7 @@
+hub fairlie
+shortLabel fairlie
+longLabel fairlie
+genomesFile genomes.txt
+email markd@ucsc.edu
+descriptionUrl hg38/empty.html
+

@@ -1,0 +1,929 @@
+
+track fairlie
+compositeTrack on
+type bigGenePred
+visibility pack
+shortLabel Fairlie tracks
+longLabel Fairlie tracks
+priority 1
+html empty.html
+
+
+
+track a673
+parent fairlie on
+shortLabel a673
+longLabel a673
+visibility pack
+description a673
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/a673.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track adipose
+parent fairlie on
+shortLabel adipose
+longLabel adipose
+visibility pack
+description adipose
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/adipose.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track adrenal_gland
+parent fairlie on
+shortLabel adrenal_gland
+longLabel adrenal_gland
+visibility pack
+description adrenal_gland
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/adrenal_gland.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track brain
+parent fairlie on
+shortLabel brain
+longLabel brain
+visibility pack
+description brain
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/brain.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track caco2
+parent fairlie on
+shortLabel caco2
+longLabel caco2
+visibility pack
+description caco2
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/caco2.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track calu3
+parent fairlie on
+shortLabel calu3
+longLabel calu3
+visibility pack
+description calu3
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/calu3.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track cerberus
+parent fairlie on
+shortLabel cerberus
+longLabel cerberus
+visibility pack
+description cerberus
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/cerberus.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track colon
+parent fairlie on
+shortLabel colon
+longLabel colon
+visibility pack
+description colon
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/colon.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track gm12878
+parent fairlie on
+shortLabel gm12878
+longLabel gm12878
+visibility pack
+description gm12878
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/gm12878.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h1
+parent fairlie on
+shortLabel h1
+longLabel h1
+visibility pack
+description h1
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h1.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h1_de
+parent fairlie on
+shortLabel h1_de
+longLabel h1_de
+visibility pack
+description h1_de
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h1_de.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9
+parent fairlie on
+shortLabel h9
+longLabel h9
+visibility pack
+description h9
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_chondro
+parent fairlie on
+shortLabel h9_chondro
+longLabel h9_chondro
+visibility pack
+description h9_chondro
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_chondro.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_de
+parent fairlie on
+shortLabel h9_de
+longLabel h9_de
+visibility pack
+description h9_de
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_de.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_neural_crest
+parent fairlie on
+shortLabel h9_neural_crest
+longLabel h9_neural_crest
+visibility pack
+description h9_neural_crest
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_neural_crest.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_osteocyte
+parent fairlie on
+shortLabel h9_osteocyte
+longLabel h9_osteocyte
+visibility pack
+description h9_osteocyte
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_osteocyte.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_panc_beta
+parent fairlie on
+shortLabel h9_panc_beta
+longLabel h9_panc_beta
+visibility pack
+description h9_panc_beta
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_panc_beta.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track h9_panc_progen
+parent fairlie on
+shortLabel h9_panc_progen
+longLabel h9_panc_progen
+visibility pack
+description h9_panc_progen
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/h9_panc_progen.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hct116
+parent fairlie on
+shortLabel hct116
+longLabel hct116
+visibility pack
+description hct116
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hct116.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track heart
+parent fairlie on
+shortLabel heart
+longLabel heart
+visibility pack
+description heart
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/heart.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hepg2
+parent fairlie on
+shortLabel hepg2
+longLabel hepg2
+visibility pack
+description hepg2
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hepg2.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hffc6
+parent fairlie on
+shortLabel hffc6
+longLabel hffc6
+visibility pack
+description hffc6
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hffc6.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60
+parent fairlie on
+shortLabel hl60
+longLabel hl60
+visibility pack
+description hl60
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m0
+parent fairlie on
+shortLabel hl60_m0
+longLabel hl60_m0
+visibility pack
+description hl60_m0
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m0.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m1_12hr
+parent fairlie on
+shortLabel hl60_m1_12hr
+longLabel hl60_m1_12hr
+visibility pack
+description hl60_m1_12hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m1_12hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m1_24hr
+parent fairlie on
+shortLabel hl60_m1_24hr
+longLabel hl60_m1_24hr
+visibility pack
+description hl60_m1_24hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m1_24hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m1_72hr
+parent fairlie on
+shortLabel hl60_m1_72hr
+longLabel hl60_m1_72hr
+visibility pack
+description hl60_m1_72hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m1_72hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m2_12hr
+parent fairlie on
+shortLabel hl60_m2_12hr
+longLabel hl60_m2_12hr
+visibility pack
+description hl60_m2_12hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m2_12hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m2_24hr
+parent fairlie on
+shortLabel hl60_m2_24hr
+longLabel hl60_m2_24hr
+visibility pack
+description hl60_m2_24hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m2_24hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hl60_m2_72hr
+parent fairlie on
+shortLabel hl60_m2_72hr
+longLabel hl60_m2_72hr
+visibility pack
+description hl60_m2_72hr
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hl60_m2_72hr.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track hmec
+parent fairlie on
+shortLabel hmec
+longLabel hmec
+visibility pack
+description hmec
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/hmec.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track huvec
+parent fairlie on
+shortLabel huvec
+longLabel huvec
+visibility pack
+description huvec
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/huvec.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track imr90
+parent fairlie on
+shortLabel imr90
+longLabel imr90
+visibility pack
+description imr90
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/imr90.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track k562
+parent fairlie on
+shortLabel k562
+longLabel k562
+visibility pack
+description k562
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/k562.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track kidney
+parent fairlie on
+shortLabel kidney
+longLabel kidney
+visibility pack
+description kidney
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/kidney.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track liver
+parent fairlie on
+shortLabel liver
+longLabel liver
+visibility pack
+description liver
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/liver.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track lung
+parent fairlie on
+shortLabel lung
+longLabel lung
+visibility pack
+description lung
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/lung.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track mcf7
+parent fairlie on
+shortLabel mcf7
+longLabel mcf7
+visibility pack
+description mcf7
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/mcf7.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track mcf10a
+parent fairlie on
+shortLabel mcf10a
+longLabel mcf10a
+visibility pack
+description mcf10a
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/mcf10a.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track muscle
+parent fairlie on
+shortLabel muscle
+longLabel muscle
+visibility pack
+description muscle
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/muscle.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track ocily7
+parent fairlie on
+shortLabel ocily7
+longLabel ocily7
+visibility pack
+description ocily7
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/ocily7.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track ovary
+parent fairlie on
+shortLabel ovary
+longLabel ovary
+visibility pack
+description ovary
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/ovary.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track panc1
+parent fairlie on
+shortLabel panc1
+longLabel panc1
+visibility pack
+description panc1
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/panc1.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pc3
+parent fairlie on
+shortLabel pc3
+longLabel pc3
+visibility pack
+description pc3
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pc3.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pc9
+parent fairlie on
+shortLabel pc9
+longLabel pc9
+visibility pack
+description pc9
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pc9.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pgp1
+parent fairlie on
+shortLabel pgp1
+longLabel pgp1
+visibility pack
+description pgp1
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pgp1.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pgp1_astro
+parent fairlie on
+shortLabel pgp1_astro
+longLabel pgp1_astro
+visibility pack
+description pgp1_astro
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pgp1_astro.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pgp1_endo
+parent fairlie on
+shortLabel pgp1_endo
+longLabel pgp1_endo
+visibility pack
+description pgp1_endo
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pgp1_endo.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track pgp1_excite_neuron
+parent fairlie on
+shortLabel pgp1_excite_neuron
+longLabel pgp1_excite_neuron
+visibility pack
+description pgp1_excite_neuron
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/pgp1_excite_neuron.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track vessels
+parent fairlie on
+shortLabel vessels
+longLabel vessels
+visibility pack
+description vessels
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/vessels.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+
+
+track wtc11
+parent fairlie on
+shortLabel wtc11
+longLabel wtc11
+visibility pack
+description wtc11
+type bigGenePred
+itemRgb on
+priority 1
+visibility pack
+bigDataUrl http://crick.bio.uci.edu/freese/wtc11.bb
+labelFields name,name2,geneName,geneName2
+defaultLabelFields name
+labelSeperator " "
+html empty.html
+
+

@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+
+import argparse
+from pycbio.sys.svgcolors import SvgColors
+from pycbio.hgdata.genePred import GenePredReader
+from pycbio.hgdata.bed import Bed
+
+MIN_INTRON_SIZE = 10
+
+def parseArgs():
+    parser = argparse.ArgumentParser(description="build BED of weird introns and frames")
+    parser.add_argument('genePred',)
+    parser.add_argument('weirdBed',)
+    return parser.parse_args()
+
+def getEndFrame(exon):
+    cds = exon.getCds()
+    return None if cds is None else (exon.frame + len(cds))
+
+def mkBed(gp, start, end, desc, color):
+    assert start < end
+    name = f"{desc} ({gp.name})"
+    return Bed(gp.chrom, start, end, name=name, score=0, strand=gp.strand, itemRgb=color.toRgb8Str())
+
+def checkWeirdIntron(gp, exonN, exonM):
+    intronSize = exonM.start - exonN.end
+    if 0 < intronSize < MIN_INTRON_SIZE:
+        yield mkBed(gp, exonN.end, exonM.start,
+                    f"tiny_intron [{intronSize}]", SvgColors.crimson)
+    elif intronSize <= 0:
+        yield mkBed(gp, exonN.end - 2, exonM.start + 2,
+                    f"adjacent_exons [{intronSize}]", SvgColors.darkviolet)
+
+def checkWeirdFrame(gp, exonN, exonM):
+    if gp.strand == '+':
+        frameA, frameB = getEndFrame(exonN.frame), exonM.frame
+    else:
+        frameA, frameB = getEndFrame(exonM.frame), exonN.frame
+    yield mkBed(gp, exonM.end - 3, exonN.start + 3,
+                f"frame_shift {frameA}..{frameB}", SvgColors.darkviolet)
+
+def findWeirdExonPair(gp, exonN, exonM):
+    weirdBeds = []
+    weirdBeds += checkWeirdIntron(gp, exonN, exonM)
+    if (exonN.frame is not None) and (exonM.frame is not None):
+        weirdBeds += checkWeirdFrame(gp, exonN, exonM)
+    return weirdBeds
+
+def getCdsStartPos(gp, exon):
+    cds = exon.getCds()
+    return cds.start if gp.strand == '+' else (cds.end - 1)
+
+def getCdsEnd(gp, exon):
+    cds = exon.getCds()
+    return (cds.end - 1) if gp.strand == '+' else cds.start
+
+def checkCdsStartFrame(gp, exon):
+    if exon.frame != 0:
+        cdsStartPos = getCdsStartPos(gp, exon)
+        yield mkBed(gp, cdsStartPos - 1, cdsStartPos + 1,
+                    f"CDS_start_truncated [{exon.frame}]", SvgColors.darkviolet)
+
+def checkCdsEndFrame(gp, exon):
+    exonEndFr = getEndFrame(exon)
+    if exonEndFr != 0:
+        cdsEndPos = getCdsEnd(gp, exon)
+        yield mkBed(gp, cdsEndPos - 1, cdsEndPos + 1,
+                    f"CDS_end_truncated [{exonEndFr}]", SvgColors.darkviolet)
+
+def checkWeirdCdsStartEnd(gp):
+    startExon, endExon = gp.exons[gp.cdsStartIExon], gp.exons[gp.cdsEndIExon]
+    if gp.strand == '-':
+        startExon, endExon = endExon, startExon
+    yield from checkCdsStartFrame(gp, startExon)
+    yield from checkCdsEndFrame(gp, endExon)
+
+def findWeirdCdsStartEnd(gp):
+    if gp.hasCds is not None:
+        yield from checkWeirdCdsStartEnd(gp)
+
+def findWeirdAnnot(gp):
+    weirdBeds = []
+    for iIntron in range(0, gp.exonCount - 1):
+        weirdBeds += findWeirdExonPair(gp, gp.exons[iIntron], gp.exons[iIntron + 1])
+    weirdBeds += findWeirdCdsStartEnd(gp)
+    return weirdBeds
+
+def findWeirdAnnots(genePredFile):
+    weirdBeds = []
+    for gp in GenePredReader(genePredFile):
+        if gp.hasCds is not None:
+            weirdBeds += checkWeirdCdsStartEnd(gp)
+    return weirdBeds
+
+def findWeirdExonFrames(genePredFile, weirdBedFile):
+    weirdBeds = findWeirdAnnots(genePredFile)
+    weirdBeds.sort(key=Bed.genome_sort_key)
+    with open(weirdBedFile, 'w') as fh:
+        for bed in weirdBeds:
+            bed.write(fh)
+
+def main(opts):
+    findWeirdExonFrames(opts.genePred, opts.weirdBed)
+
+main(parseArgs())
